@@ -5,11 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Hello world"
-            }
-        }
-        stage {
-            steps('vlad') {
-               echo "Hellow worldwsadsa"
+                echo "Add Something else"
+                whoami
             }
         }
     }
