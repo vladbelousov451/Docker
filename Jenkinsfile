@@ -5,7 +5,8 @@ pipeline {
       stage('Hello') {
          steps {
             echo 'Hello World'
-            echo 'whoamin'
+            wrap([$class: 'BuildUser']) {
+            sh 'echo "${BUILD_USER}"'
          }
       }
    }
